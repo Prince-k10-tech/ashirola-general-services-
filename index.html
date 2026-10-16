@@ -7,7 +7,7 @@
 <meta name="description" content="Import and export, including clearing and forwarding, from Ikeja, Lagos. Also real estate development and general services from Ashiri-Ola General Services Ltd.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://ashiriolageneralservices.com.ng/">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'sha256-poSwkGlgek6dWZsx32spQYozwSqXoo7JwbNYF/m7i9g='; script-src 'sha256-6jOX9TGW8TzF36cvfKg9/6IjDzlsc3tjg/3Jhn0cBLU='; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'sha256-Dlxr/e5F6a0RTDvkPkdvRpONEhl519It59e1p0mCRmY='; script-src 'sha256-6jOX9TGW8TzF36cvfKg9/6IjDzlsc3tjg/3Jhn0cBLU='; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#06101D">
 <link rel="icon" href="favicon.ico" sizes="48x48">
@@ -16,8 +16,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<link rel="preload" href="fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ashiri-Ola General Services Ltd">
 <meta property="og:locale" content="en_NG">
@@ -161,7 +161,8 @@ a:hover{color:var(--golddk)}
 .frame-inner{position:relative;overflow:hidden;background:var(--navy);box-shadow:0 34px 90px rgba(0,0,0,.55)}
 .frame-inner img,.frame-inner svg{display:block;width:100%;height:auto}
 .kb{animation:kb 26s ease-in-out infinite alternate}
-.hero-photo{display:flex;align-items:center;min-height:clamp(560px,86vh,800px)}
+.hero-photo{display:flex;align-items:center;min-height:clamp(560px,calc(100vh - 160px),920px)}
+@supports (height:100svh){.hero-photo{min-height:clamp(560px,calc(100svh - 160px),920px)}}
 .hero-photo .hero-grid{grid-template-columns:1fr;width:100%}
 .hero-photo .hero-grid>div{max-width:40rem}
 .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--navy)}
@@ -173,6 +174,12 @@ a:hover{color:var(--golddk)}
 .strip{background:var(--ink2);border-block:1px solid rgba(200,150,62,.28)}
 .strip ul{list-style:none;margin:0 auto;padding:1.15rem 24px;display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem 0;max-width:1200px}
 .strip li{position:relative;font:600 .76rem/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--gold2);padding:0 1.7rem}
+.strip a{color:inherit;text-decoration:none;transition:color .3s}
+.strip a:hover{color:#fff}
+.mini-foot{background:var(--ink);color:var(--mutd);font-size:.9rem;padding:1.2rem 0}
+.mini-foot .wrap{display:flex;flex-wrap:wrap;gap:.4rem 2rem;justify-content:space-between}
+.mini-foot a{color:#fff;text-decoration:none}
+.mini-foot a:hover{color:var(--gold2)}
 .strip li+li::before{content:"";position:absolute;left:-3px;top:50%;width:6px;height:6px;background:var(--gold);transform:translateY(-50%) rotate(45deg)}
 /* inner page hero */
 .page-hero{position:relative;overflow:hidden;background:var(--ink);padding:clamp(3rem,8vw,5.5rem) 0 clamp(3rem,7vw,4.8rem);color:var(--ond)}
@@ -316,7 +323,7 @@ fieldset{border:0;padding:0;margin:0 0 1.3rem;min-width:0}
 @media (min-width:960px){.hero-grid{grid-template-columns:1.02fr .98fr}.split{grid-template-columns:1fr 1fr;gap:5rem}.split.rev>:first-child{order:2}.contact-grid{grid-template-columns:.75fr 1.25fr}.why{grid-template-columns:repeat(4,1fr)}.steps{grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}.steps li{grid-template-columns:1fr;padding:1.8rem 1.4rem 1.8rem 0;border-bottom:0}.steps li::before{grid-row:auto;margin-bottom:.9rem}}
 @media (max-width:520px){.facts{grid-template-columns:1fr}.brand-text strong{font-size:1.4rem}.brand-text span{letter-spacing:.2em}.frame::before{inset:12px -10px -12px 12px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.menu.open .menu-links li{opacity:1;transform:none}}
-@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2")}@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2")}@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2")}@font-face{font-family:Jost;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/jost-latin-400-normal.woff2) format("woff2")}@font-face{font-family:Jost;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/jost-latin-500-normal.woff2) format("woff2")}@font-face{font-family:Jost;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/jost-latin-600-normal.woff2) format("woff2")}</style>
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(cormorant-garamond-latin-500-normal.woff2) format("woff2")}@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(cormorant-garamond-latin-600-normal.woff2) format("woff2")}@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url(cormorant-garamond-latin-500-italic.woff2) format("woff2")}@font-face{font-family:Jost;font-style:normal;font-weight:400;font-display:swap;src:url(jost-latin-400-normal.woff2) format("woff2")}@font-face{font-family:Jost;font-style:normal;font-weight:500;font-display:swap;src:url(jost-latin-500-normal.woff2) format("woff2")}@font-face{font-family:Jost;font-style:normal;font-weight:600;font-display:swap;src:url(jost-latin-600-normal.woff2) format("woff2")}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -346,7 +353,7 @@ fieldset{border:0;padding:0;margin:0 0 1.3rem;min-width:0}
 </div>
 </div>
 <main id="main">
-<section class="hero hero-photo"><div class="hero-bg"><img class="kb" src="assets/hero-port.jpg" width="1600" height="900" alt="Container ship loading at a port at dusk beneath quayside cranes" loading="eager" fetchpriority="high"></div>
+<section class="hero hero-photo"><div class="hero-bg"><img class="kb" src="hero-port.jpg" width="1600" height="900" alt="Container ship loading at a port at dusk beneath quayside cranes" loading="eager" fetchpriority="high"></div>
 <div class="wrap hero-grid">
 <div>
 <p class="eyebrow in d1">Excellence | Reliability | Integrity</p>
@@ -357,105 +364,12 @@ fieldset{border:0;padding:0;margin:0 0 1.3rem;min-width:0}
 
 </div>
 </section>
-<div class="strip"><ul><li>Import &amp; Export</li><li>Real Estate Development</li><li>General Services</li></ul></div>
-
-<section>
-<div class="wrap">
-<div class="sec-head reveal"><p class="eyebrow">What we do</p><h2>Three ways we work for you</h2><p class="lead">Trade and logistics sit at the heart of the company. Property and general services complete it.</p></div>
-<div class="grid c3">
-<article class="svc reveal"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 17h18l-2.2 3H5.2zM6 17v-4h12v4M8 13V9h8v4M12 9V5"/><path d="M2 21c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0" opacity=".6"/></svg></div><h3>Import &amp; Export</h3><p class="tag">Includes clearing &amp; forwarding</p><p>Sourcing support, shipping and customs documentation, port clearing and haulage, coordinated by one team.</p><a class="more" href="services.html#import-export">Learn more</a></article>
-<article class="svc reveal"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6M3 21h18"/></svg></div><h3>Real Estate Development</h3><p class="tag">Development &middot; Acquisition &middot; Delivery</p><p>Property development, acquisition and project delivery, from land to finished, liveable spaces.</p><a class="more" href="services.html#real-estate">Learn more</a></article>
-<article class="svc reveal"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18M11 13v2h2v-2"/></svg></div><h3>General Services</h3><p class="tag">Procurement &middot; Logistics support &middot; Contracting</p><p>Procurement, logistics support and general contracting, tailored to the needs of each client.</p><a class="more" href="services.html#general-services">Learn more</a></article>
-</div>
-</div>
-</section>
-
-<section class="dark">
-<div class="wrap split">
-<div class="reveal">
-<p class="eyebrow">Trade &amp; logistics</p>
-<h2>Import &amp; Export, <em>end to end</em></h2>
-<p class="pill">Clearing &amp; forwarding included</p>
-<p>Moving goods in or out of Nigeria means arranging the shipment, preparing the paperwork, clearing the cargo through customs and the port, and getting it delivered. We coordinate those steps together so you deal with one team instead of several.</p>
-<ul class="checks">
-<li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Sourcing support and cross-border movement of goods</span></li>
-<li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Shipping and customs documentation</span></li>
-<li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Port clearing and customs processing</span></li>
-<li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Haulage and delivery of cleared cargo</span></li>
-</ul>
-<a class="btn btn-gold" href="services.html#import-export">How it works</a>
-</div>
-<div class="reveal"><img class="" src="assets/haulage.jpg" width="1200" height="900" alt="Truck carrying a shipping container on a highway beside a container port at sunset" loading="lazy" decoding="async"></div>
-</div>
-</section>
-
-<section>
-<div class="wrap">
-<div class="sec-head reveal"><p class="eyebrow">How we work</p><h2>How we handle your enquiry</h2></div>
-<ol class="steps reveal">
-<li><strong>Send your details</strong><span>Use the form or call us with a description of your goods or project.</span></li>
-<li><strong>We review it</strong><span>We look at what you need and ask for anything that is missing.</span></li>
-<li><strong>We confirm the scope</strong><span>You hear back on what is required and how we can help.</span></li>
-<li><strong>We coordinate</strong><span>We work through the steps with you until the job is done.</span></li>
-</ol>
-</div>
-</section>
-
-<section class="dark">
-<div class="wrap">
-<div class="sec-head reveal"><p class="eyebrow">Why choose us</p><h2>Built on four <em>commitments</em></h2></div>
-<div class="why reveal">
-<div><h3>International trade</h3><p>Import and export coordination in one place.</p></div>
-<div><h3>Reliable service</h3><p>Honest updates and a clear point of contact.</p></div>
-<div><h3>Professional team</h3><p>Experience across trade, logistics and property.</p></div>
-<div><h3>Client focus</h3><p>Long-term relationships built on results.</p></div>
-</div>
-</div>
-</section>
-
-<section class="alt">
-<div class="wrap faq prose">
-<div class="sec-head reveal"><p class="eyebrow">Questions</p><h2>Frequently asked questions</h2></div>
-<details><summary>Does Import &amp; Export include clearing and forwarding?</summary><p>Yes. Clearing and forwarding is part of our import and export service, so one team coordinates the documentation, port clearing and onward movement of your goods.</p></details><details><summary>How do I get a quote?</summary><p>Send an enquiry through the contact page, or call us. Tell us what the goods are, where they are coming from or going to, and roughly how much there is. Pricing depends on those details, so we do not publish fixed rates.</p></details><details><summary>What details should I have ready?</summary><p>A description of the goods, the origin and destination, approximate weight or volume, and any supplier or buyer documents you already have. If you are unsure, send what you have and we will tell you what else is needed.</p></details><details><summary>Do you only handle shipping?</summary><p>No. Ashiri-Ola also delivers real estate development and general services such as procurement, logistics support and general contracting. The contact form adapts to whichever you choose.</p></details><details><summary>Where are you based?</summary><p>Our office is in Ikeja, Lagos State, Nigeria.</p></details>
-</div>
-</section>
-
-<section class="dark cta">
-<div class="wrap">
-<p class="eyebrow">Begin an enquiry</p>
-<h2 class="reveal">Ready to talk about your cargo or project?</h2>
-<p class="lead">Tell us what you need to import, export, build or source and we will come back to you.</p>
-<div class="actions"><a class="btn btn-gold" href="contact.html">Request a quote</a><a class="btn btn-line" href="tel:+2348083813441">Call +234 808 381 3441</a></div>
-</div>
-</section>
+<div class="strip"><ul><li><a href="services.html#import-export">Import &amp; Export</a></li><li><a href="services.html#real-estate">Real Estate Development</a></li><li><a href="services.html#general-services">General Services</a></li></ul></div>
 </main>
-<footer class="site-footer">
+<footer class="mini-foot">
 <div class="wrap">
-<div class="foot-grid">
-<div>
-<p class="big">Ashiri-Ola General Services Ltd</p>
-<p>Excellence | Reliability | Integrity.<br>Import &amp; export, real estate development and general services.</p>
-</div>
-<div>
-<h2>Explore</h2>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About us</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="contact.html">Contact &amp; quotes</a></li>
-<li><a href="privacy.html">Privacy notice</a></li>
-</ul>
-</div>
-<div>
-<h2>Contact</h2>
-<ul>
-<li><a href="tel:+2348083813441">+234 808 381 3441</a></li>
-<li><a href="mailto:ashiriolageneralservices@gmail.com">ashiriolageneralservices@gmail.com</a></li>
-<li>Ikeja, Lagos State, Nigeria</li>
-</ul>
-</div>
-</div>
-<div class="copy"><span>&copy; 2026 Ashiri-Ola General Services Ltd. All rights reserved.</span><span>We deliver solutions that move the world.</span></div>
+<span>&copy; 2026 Ashiri-Ola General Services Ltd</span>
+<span><a href="tel:+2348083813441">+234 808 381 3441</a> &middot; <a href="privacy.html">Privacy notice</a></span>
 </div>
 </footer>
 <script>
